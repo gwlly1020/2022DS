@@ -8,13 +8,12 @@ do
 {
     targetFloor = readline.question("Elevator now at " + currentFloor + ". Ur target?");
 
-    if(floorname.indexOf (targetfloor.touppercase()) < 0) ;
+    if (floorname.indexOf (targetfloor.touppercase()) < 0) ;
     {
         console.log ("please input floor : " + floorname.toString()) ;
         continue ;
     }
-    else
-    {
+    else{
         console.log("OK") ;
         targetfloor = floorname.indexOf (targetfloor.touppercase()) ;
        //move elevator
