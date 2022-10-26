@@ -3,7 +3,7 @@ var readline = require("readline-sync");
 var currentFloor = 5; //
 var targetFloor; //
 const top = 6; //
-const bottom = 1; //
+const bottom = 1; //B2 B1 1 2 3 5...
 
 do {
     targetFloor = readline.question("Elevator now at " + currentFloor + ". Ur target?");
@@ -27,13 +27,21 @@ do {
             console.log("Down...");
             while(targetFloor<currentFloor){
                 //currentFloor -= 1;
-                //currentFloor--;
-                currentFloor = currentFloor -1;
-                console.log("Elevator now at:"+currentFloor);
+                currentFloor--;
+                //currentFloor = currentFloor -1;
+                console.log("Elevator now at:"+  currentFloor);
             }
         }else if(targetFloor > currentFloor){ //case 2: up
-       
-        
+            // do{
+            //     currentFloor++;
+            //     console.log("Elevator now at:"+  currentFloor);
+            // }while(targetFloor > currentFloor);
+            // for(;targetFloor>currentFloor; currentFloor++){
+            //     console.log("Elevator now at:"+  currentFloor);
+            // }
+            for(;targetFloor>currentFloor;){
+                console.log("Elevator now at:"+  (++currentFloor));
+            }
         }
         //else if(targetFloor==currentFloor){//case 3: stop
         else{
